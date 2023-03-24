@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="title">第{{pass}}关</view>
+    <view class="goal">目标分：{{goal}}</view>
+    <view class="score">得分：{{score}}</view>
+  </view>
+  <view class="transition {{transting && 'move'}}" bindanimationend="animateEnd">
+    <view class="title">关卡{{pass}}</view>
+    <view class="goal">目标分：{{goal}}</view>
+  </view>
+  <view class="content {{list.length && 'show'}}" style="width:{{column*35}}px;height:{{row*35}}px;" >
+    <view class="column {{xindex}}" wx:for="{{list}}" wx:for-item='xitem' wx:for-index='xindex' wx:key="xindex" style="height:{{row*35}}px;left:{{xindex*35}}px;">
+      <view class="point {{yitem.shake && 'shake'}}" wx:for="{{xitem}}" wx:for-item="yitem" wx:for-index='yindex' wx:key="yindex" bindtap="clickPoint" data-x="{{xindex}}" data-y="{{yindex}}" style="bottom:{{yindex*35}}px;">
+        <view class="brick bg-{{yitem.type}}"></view>
+      </view>
+    </view>
+  </view>
+</view>

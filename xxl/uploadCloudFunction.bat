@@ -1,0 +1,1 @@
+"D:\Person App\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-9gndg9grbe618fa7 --n quickstartFunctions --r --project "D:\Weixin Game/xxx" --report_first --report

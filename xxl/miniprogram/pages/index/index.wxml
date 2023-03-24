@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="content">
+  <view class="title">消消乐</view>
+   <button class="btn" type="primary" bindtap="start">开始游戏</button>
+  </view>
+</view>
